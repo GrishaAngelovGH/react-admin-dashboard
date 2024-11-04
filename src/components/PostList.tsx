@@ -2,7 +2,8 @@ import {
   Datagrid,
   List,
   ReferenceField,
-  TextField
+  TextField,
+  FunctionField
 } from "react-admin"
 
 const PostList = () => (
@@ -11,7 +12,10 @@ const PostList = () => (
       <TextField source="id" />
       <ReferenceField source="userId" reference="users" />
       <TextField source="title" label="Post Title" />
-      <TextField source="body" />
+      <FunctionField
+        label="Excerpt"
+        render={(record) => `${record.body.substring(0, 50)}...`}
+      />
     </Datagrid>
   </List>
 )
