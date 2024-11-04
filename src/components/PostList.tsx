@@ -8,7 +8,14 @@ import {
 
 const PostList = () => (
   <List>
-    <Datagrid>
+    <Datagrid
+      sx={{
+        '.RaDatagrid-headerCell': {
+          padding: '16px',
+          background: "#e3e3e3"
+        }
+      }}
+    >
       <TextField source="id" />
       <ReferenceField source="userId" reference="users" />
       <TextField source="title" label="Post Title" />
