@@ -17,6 +17,6 @@ import PostEdit from "./components/PostEdit"
 export const App = () => (
   <Admin layout={Layout} dataProvider={dataProvider}>
     <Resource name="posts" list={PostList} show={PostShow} edit={PostEdit} />
-    <Resource name="users" list={UserList} show={UserShow} />
+    <Resource name="users" list={UserList} show={UserShow} edit={EditGuesser} />
   </Admin>
 )
