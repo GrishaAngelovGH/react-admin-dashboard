@@ -1,6 +1,7 @@
 import {
   Admin,
-  Resource
+  Resource,
+  EditGuesser
 } from "react-admin"
 import { Layout } from "./Layout"
 import { dataProvider } from "./dataProvider"
@@ -13,7 +14,7 @@ import UserShow from "./components/UserShow"
 
 export const App = () => (
   <Admin layout={Layout} dataProvider={dataProvider}>
-    <Resource name="posts" list={PostList} show={PostShow} />
+    <Resource name="posts" list={PostList} show={PostShow} edit={EditGuesser} />
     <Resource name="users" list={UserList} show={UserShow} />
   </Admin>
 )
