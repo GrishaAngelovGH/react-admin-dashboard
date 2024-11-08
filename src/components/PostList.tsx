@@ -4,6 +4,7 @@ import {
   ReferenceField,
   TextField,
   FunctionField,
+  EditButton,
   useRecordContext
 } from "react-admin"
 
@@ -33,6 +34,7 @@ const PostList = () => (
         label="Excerpt"
         render={(record) => `${record.body.substring(0, 50)}...`}
       />
+      <EditButton />
     </Datagrid>
   </List>
 )
