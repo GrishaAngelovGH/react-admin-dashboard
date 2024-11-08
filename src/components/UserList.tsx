@@ -1,7 +1,8 @@
 import {
   Datagrid,
   List,
-  TextField
+  TextField,
+  EditButton
 } from "react-admin"
 
 const UserList = () => {
@@ -12,6 +13,7 @@ const UserList = () => {
         <TextField source="name" />
         <TextField source="email" />
         <TextField source="phone" />
+        <EditButton />
       </Datagrid>
     </List>
   )
