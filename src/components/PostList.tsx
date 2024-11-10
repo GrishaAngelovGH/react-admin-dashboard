@@ -2,6 +2,7 @@ import {
   Datagrid,
   List,
   ReferenceField,
+  ReferenceInput,
   TextField,
   TextInput,
   FunctionField,
@@ -19,7 +20,8 @@ const PostPanel = () => {
 
 const PostList = () => {
   const filters = [
-    <TextInput source="q" label="Search" alwaysOn />
+    <TextInput source="q" label="Search" alwaysOn />,
+    <ReferenceInput source="userId" label="User" reference="users" />
   ]
 
   return (
