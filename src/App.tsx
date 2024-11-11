@@ -17,9 +17,27 @@ import UserCreate from "./components/UserCreate"
 import PostEdit from "./components/PostEdit"
 import UserEdit from "./components/UserEdit"
 
+import ArticleIcon from "@mui/icons-material/Article"
+import PersonIcon from "@mui/icons-material/Person"
+
 export const App = () => (
   <Admin layout={Layout} dataProvider={dataProvider}>
-    <Resource name="posts" list={PostList} show={PostShow} create={PostCreate} edit={PostEdit} />
-    <Resource name="users" list={UserList} show={UserShow} create={UserCreate} edit={UserEdit} />
+    <Resource
+      icon={ArticleIcon}
+      name="posts"
+      list={PostList}
+      show={PostShow}
+      create={PostCreate}
+      edit={PostEdit}
+    />
+
+    <Resource
+      icon={PersonIcon}
+      name="users"
+      list={UserList}
+      show={UserShow}
+      create={UserCreate}
+      edit={UserEdit}
+    />
   </Admin>
 )
