@@ -5,17 +5,17 @@ import {
 import { Layout } from "./Layout"
 import { dataProvider } from "./dataProvider"
 
-import PostList from "./components/PostList"
-import UserList from "./components/UserList"
+import PostList from "./components/posts/PostList"
+import UserList from "./components/users/UserList"
 
-import PostShow from "./components/PostShow"
-import UserShow from "./components/UserShow"
+import PostShow from "./components/posts/PostShow"
+import UserShow from "./components/users/UserShow"
 
-import PostCreate from "./components/PostCreate"
-import UserCreate from "./components/UserCreate"
+import PostCreate from "./components/posts/PostCreate"
+import UserCreate from "./components/users/UserCreate"
 
-import PostEdit from "./components/PostEdit"
-import UserEdit from "./components/UserEdit"
+import PostEdit from "./components/posts/PostEdit"
+import UserEdit from "./components/users/UserEdit"
 
 import ArticleIcon from "@mui/icons-material/Article"
 import PersonIcon from "@mui/icons-material/Person"
