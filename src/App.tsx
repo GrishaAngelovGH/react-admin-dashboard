@@ -5,6 +5,8 @@ import {
 import { Layout } from "./Layout"
 import { dataProvider } from "./dataProvider"
 
+import HomePage from "./components/HomePage"
+
 import PostList from "./components/posts/PostList"
 import UserList from "./components/users/UserList"
 
@@ -21,7 +23,7 @@ import ArticleIcon from "@mui/icons-material/Article"
 import PersonIcon from "@mui/icons-material/Person"
 
 export const App = () => (
-  <Admin layout={Layout} dataProvider={dataProvider}>
+  <Admin layout={Layout} dataProvider={dataProvider} dashboard={HomePage}>
     <Resource
       icon={ArticleIcon}
       name="posts"
