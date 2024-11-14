@@ -1,6 +1,7 @@
 import {
   Admin,
-  Resource
+  Resource,
+  ListGuesser
 } from "react-admin"
 import { Layout } from "./Layout"
 import { dataProvider } from "./dataProvider"
@@ -22,6 +23,15 @@ import UserEdit from "./components/users/UserEdit"
 
 import ArticleIcon from "@mui/icons-material/Article"
 import PersonIcon from "@mui/icons-material/Person"
+import CommentIcon from "@mui/icons-material/Comment"
+
+/*
+Resource props:
+- list: Designed to display multiple records in a resource. It typically shows a paginated table, grid, or list format where users can browse, filter, sort, and search for records.
+- show: Used to display the details of a single record. It focuses on presenting the non-editable details of one specific item, often accessed from the "List" view.
+- create: Defines the component used for creating a new record in the resource.
+- edit: Defines the component used for editing an existing record in the resource.
+*/
 
 export const App = () => (
   <Admin layout={Layout} dataProvider={dataProvider} authProvider={authProvider} dashboard={HomePage}>
@@ -41,6 +51,12 @@ export const App = () => (
       show={UserShow}
       create={UserCreate}
       edit={UserEdit}
+    />
+
+    <Resource
+      icon={CommentIcon}
+      name="comments"
+      list={ListGuesser}
     />
   </Admin>
 )
