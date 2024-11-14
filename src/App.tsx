@@ -1,7 +1,6 @@
 import {
   Admin,
-  Resource,
-  ListGuesser
+  Resource
 } from "react-admin"
 import { Layout } from "./Layout"
 import { dataProvider } from "./dataProvider"
@@ -11,6 +10,7 @@ import HomePage from "./components/HomePage"
 
 import PostList from "./components/posts/PostList"
 import UserList from "./components/users/UserList"
+import CommentList from "./components/comments/CommentList"
 
 import PostShow from "./components/posts/PostShow"
 import UserShow from "./components/users/UserShow"
@@ -56,7 +56,7 @@ export const App = () => (
     <Resource
       icon={CommentIcon}
       name="comments"
-      list={ListGuesser}
+      list={CommentList}
     />
   </Admin>
 )
