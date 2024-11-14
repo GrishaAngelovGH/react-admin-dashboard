@@ -1,13 +1,13 @@
 import {
   Datagrid,
   EmailField,
-  List,
+  InfiniteList,
   ReferenceField,
   TextField
 } from "react-admin"
 
 const CommentList = () => (
-  <List>
+  <InfiniteList>
     <Datagrid>
       <TextField source="id" />
       <TextField source="name" />
@@ -15,7 +15,7 @@ const CommentList = () => (
       <ReferenceField source="postId" reference="posts" />
       <TextField source="body" />
     </Datagrid>
-  </List>
+  </InfiniteList>
 )
 
 export default CommentList
