@@ -1,7 +1,6 @@
 import {
   Admin,
-  Resource,
-  ShowGuesser
+  Resource
 } from "react-admin"
 import { Layout } from "./Layout"
 import { dataProvider } from "./dataProvider"
@@ -15,6 +14,7 @@ import CommentList from "./components/comments/CommentList"
 
 import PostShow from "./components/posts/PostShow"
 import UserShow from "./components/users/UserShow"
+import CommentShow from "./components/comments/CommentShow"
 
 import PostCreate from "./components/posts/PostCreate"
 import UserCreate from "./components/users/UserCreate"
@@ -58,7 +58,7 @@ export const App = () => (
       icon={CommentIcon}
       name="comments"
       list={CommentList}
-      show={ShowGuesser}
+      show={CommentShow}
     />
   </Admin>
 )
