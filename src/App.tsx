@@ -1,6 +1,7 @@
 import {
   Admin,
-  Resource
+  Resource,
+  ShowGuesser
 } from "react-admin"
 import { Layout } from "./Layout"
 import { dataProvider } from "./dataProvider"
@@ -57,6 +58,7 @@ export const App = () => (
       icon={CommentIcon}
       name="comments"
       list={CommentList}
+      show={ShowGuesser}
     />
   </Admin>
 )
