@@ -7,7 +7,14 @@ import {
 } from "react-admin"
 
 const CommentList = () => (
-  <InfiniteList>
+  <InfiniteList
+    sx={{
+      '.RaDatagrid-headerCell': {
+        padding: '16px',
+        background: "#e3e3e3"
+      }
+    }}
+  >
     <Datagrid>
       <TextField source="id" />
       <TextField source="name" />
