@@ -1,6 +1,6 @@
 import {
   Admin,
-  Resource
+  Resource,
 } from "react-admin"
 import { Layout } from "./Layout"
 import { dataProvider } from "./dataProvider"
@@ -18,6 +18,7 @@ import CommentShow from "./components/comments/CommentShow"
 
 import PostCreate from "./components/posts/PostCreate"
 import UserCreate from "./components/users/UserCreate"
+import CommentCreate from "./components/comments/CommentCreate"
 
 import PostEdit from "./components/posts/PostEdit"
 import UserEdit from "./components/users/UserEdit"
@@ -59,6 +60,7 @@ export const App = () => (
       name="comments"
       list={CommentList}
       show={CommentShow}
+      create={CommentCreate}
     />
   </Admin>
 )
