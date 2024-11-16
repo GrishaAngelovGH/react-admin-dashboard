@@ -1,7 +1,6 @@
 import {
   Admin,
   Resource,
-  EditGuesser,
 } from "react-admin"
 import { Layout } from "./Layout"
 import { dataProvider } from "./dataProvider"
@@ -23,6 +22,7 @@ import CommentCreate from "./components/comments/CommentCreate"
 
 import PostEdit from "./components/posts/PostEdit"
 import UserEdit from "./components/users/UserEdit"
+import CommentEdit from "./components/comments/CommentEdit"
 
 import ArticleIcon from "@mui/icons-material/Article"
 import PersonIcon from "@mui/icons-material/Person"
@@ -62,7 +62,7 @@ export const App = () => (
       list={CommentList}
       show={CommentShow}
       create={CommentCreate}
-      edit={EditGuesser}
+      edit={CommentEdit}
     />
   </Admin>
 )
