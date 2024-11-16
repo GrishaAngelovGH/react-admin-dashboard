@@ -1,6 +1,7 @@
 import {
   Admin,
   Resource,
+  EditGuesser,
 } from "react-admin"
 import { Layout } from "./Layout"
 import { dataProvider } from "./dataProvider"
@@ -61,6 +62,7 @@ export const App = () => (
       list={CommentList}
       show={CommentShow}
       create={CommentCreate}
+      edit={EditGuesser}
     />
   </Admin>
 )
