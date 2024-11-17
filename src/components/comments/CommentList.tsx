@@ -3,7 +3,8 @@ import {
   EmailField,
   InfiniteList,
   ReferenceField,
-  TextField
+  TextField,
+  EditButton
 } from "react-admin"
 
 const CommentList = () => (
@@ -21,6 +22,7 @@ const CommentList = () => (
       <EmailField source="email" />
       <ReferenceField source="postId" reference="posts" />
       <TextField source="body" />
+      <EditButton />
     </Datagrid>
   </InfiniteList>
 )
