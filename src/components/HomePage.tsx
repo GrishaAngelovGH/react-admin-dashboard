@@ -1,3 +1,5 @@
+import { useTranslate } from "react-admin"
+
 import {
   Card,
   CardContent,
@@ -6,6 +8,8 @@ import {
 } from "@mui/material"
 
 const HomePage = () => {
+  const translate = useTranslate()
+
   return (
     <Box
       sx={{
@@ -18,11 +22,10 @@ const HomePage = () => {
       <Card sx={{ maxWidth: 400, padding: 2, textAlign: "center" }}>
         <CardContent>
           <Typography variant="h4" component="div" gutterBottom>
-            Welcome to the React Admin Dashboard
+            {translate("custom.homePage.title")}
           </Typography>
           <Typography variant="body1" color="text.secondary">
-            Manage your posts and users effortlessly with the tools provided.
-            Navigate through the menu to get started.
+            {translate("custom.homePage.description")}
           </Typography>
         </CardContent>
       </Card>

@@ -1,6 +1,7 @@
 import {
   Admin,
   Resource,
+  useTranslate
 } from "react-admin"
 import { Layout } from "./Layout"
 import { dataProvider } from "./dataProvider"
@@ -28,6 +29,8 @@ import ArticleIcon from "@mui/icons-material/Article"
 import PersonIcon from "@mui/icons-material/Person"
 import CommentIcon from "@mui/icons-material/Comment"
 
+import { i18nProvider } from "./i18nProvider"
+
 /*
 Resource props:
 - list: Designed to display multiple records in a resource. It typically shows a paginated table, grid, or list format where users can browse, filter, sort, and search for records.
@@ -36,33 +39,46 @@ Resource props:
 - edit: Defines the component used for editing an existing record in the resource.
 */
 
-export const App = () => (
-  <Admin layout={Layout} dataProvider={dataProvider} authProvider={authProvider} dashboard={HomePage}>
-    <Resource
-      icon={ArticleIcon}
-      name="posts"
-      list={PostList}
-      show={PostShow}
-      create={PostCreate}
-      edit={PostEdit}
-    />
+export const App = () => {
+  const translate = useTranslate()
 
-    <Resource
-      icon={PersonIcon}
-      name="users"
-      list={UserList}
-      show={UserShow}
-      create={UserCreate}
-      edit={UserEdit}
-    />
+  return (
+    <Admin
+      authProvider={authProvider}
+      dataProvider={dataProvider}
+      i18nProvider={i18nProvider}
+      layout={Layout}
+      dashboard={HomePage}
+    >
+      <Resource
+        icon={ArticleIcon}
+        name="posts"
+        options={{ label: translate('ra.resources.posts.name') }}
+        list={PostList}
+        show={PostShow}
+        create={PostCreate}
+        edit={PostEdit}
+      />
 
-    <Resource
-      icon={CommentIcon}
-      name="comments"
-      list={CommentList}
-      show={CommentShow}
-      create={CommentCreate}
-      edit={CommentEdit}
-    />
-  </Admin>
-)
+      <Resource
+        icon={PersonIcon}
+        name="users"
+        options={{ label: translate('ra.resources.users.name') }}
+        list={UserList}
+        show={UserShow}
+        create={UserCreate}
+        edit={UserEdit}
+      />
+
+      <Resource
+        icon={CommentIcon}
+        name="comments"
+        options={{ label: translate('ra.resources.comments.name') }}
+        list={CommentList}
+        show={CommentShow}
+        create={CommentCreate}
+        edit={CommentEdit}
+      />
+    </Admin>
+  )
+}
