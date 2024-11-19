@@ -8,6 +8,7 @@ import { dataProvider } from "./dataProvider"
 import { authProvider } from "./authProvider"
 
 import HomePage from "./components/HomePage"
+import ImageGridPage from "./components/ImageGridPage"
 
 import PostList from "./components/posts/PostList"
 import UserList from "./components/users/UserList"
@@ -28,6 +29,7 @@ import CommentEdit from "./components/comments/CommentEdit"
 import ArticleIcon from "@mui/icons-material/Article"
 import PersonIcon from "@mui/icons-material/Person"
 import CommentIcon from "@mui/icons-material/Comment"
+import ImageIcon from "@mui/icons-material/Image"
 
 import { i18nProvider } from "./i18nProvider"
 
@@ -78,6 +80,13 @@ export const App = () => {
         show={CommentShow}
         create={CommentCreate}
         edit={CommentEdit}
+      />
+
+      <Resource
+        icon={ImageIcon}
+        name="images"
+        options={{ label: translate('ra.resources.images.name') }}
+        list={ImageGridPage}
       />
     </Admin>
   )

@@ -28,6 +28,9 @@ const customEn: CustomTranslationMessages = {
       },
       comments: {
         name: "Comments"
+      },
+      images: {
+        name: "Images"
       }
     }
   },
@@ -35,6 +38,17 @@ const customEn: CustomTranslationMessages = {
     homePage: {
       title: "Welcome to the React Admin Dashboard",
       description: "Manage your posts and users effortlessly with the tools provided. Navigate through the menu to get started."
+    },
+    imageCategories: {
+      animals: "Animals",
+      avatars: "Avatars",
+      business: "Business",
+      cars: "Cars",
+      city: "City",
+      flowers: "Flowers",
+      food: "Food",
+      nature: "Nature",
+      sports: "Sports"
     }
   }
 }
@@ -52,6 +66,9 @@ const customBg: CustomTranslationMessages = {
       },
       comments: {
         name: "Коментари"
+      },
+      images: {
+        name: "Изображения"
       }
     }
   },
@@ -59,6 +76,17 @@ const customBg: CustomTranslationMessages = {
     homePage: {
       title: "Добре дошли в системата React Admin Dashboard",
       description: "Управлявайте вашите публикации и потребители лесно с предоставените инструменти. Изберете желаната опция от менюто, за да започнете работа със системата."
+    },
+    imageCategories: {
+      animals: "Животни",
+      avatars: "Аватари",
+      business: "Бизнес",
+      cars: "Коли",
+      city: "Градове",
+      flowers: "Цветя",
+      food: "Храна",
+      nature: "Природа",
+      sports: "Спорт"
     }
   }
 }
