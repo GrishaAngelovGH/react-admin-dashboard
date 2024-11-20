@@ -31,6 +31,9 @@ const customEn: CustomTranslationMessages = {
       },
       images: {
         name: "Images"
+      },
+      activityLogs: {
+        name: "Activity Logs"
       }
     }
   },
@@ -69,6 +72,9 @@ const customBg: CustomTranslationMessages = {
       },
       images: {
         name: "Изображения"
+      },
+      activityLogs: {
+        name: "Регистър на активности"
       }
     }
   },

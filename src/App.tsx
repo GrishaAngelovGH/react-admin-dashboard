@@ -9,6 +9,7 @@ import { authProvider } from "./authProvider"
 
 import HomePage from "./components/HomePage"
 import ImageGridPage from "./components/ImageGridPage"
+import ActivityLogsPage from "./components/ActivityLogsPage"
 
 import PostList from "./components/posts/PostList"
 import UserList from "./components/users/UserList"
@@ -87,6 +88,12 @@ export const App = () => {
         name="images"
         options={{ label: translate('ra.resources.images.name') }}
         list={ImageGridPage}
+      />
+
+      <Resource
+        name="activity-logs"
+        options={{ label: translate('ra.resources.activityLogs.name') }}
+        list={ActivityLogsPage}
       />
     </Admin>
   )
